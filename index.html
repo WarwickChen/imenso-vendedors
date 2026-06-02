@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMENSO - Contatos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* 背景：使用你提供的本地图片 */
+        body {
+            background-image: url('C:/Users/gabri/Downloads/background.png');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* 顶部居中Logo，放大一倍 */
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .logo {
+            height: 120px;
+            width: auto;
+        }
+
+        /* 固定 2x2 布局 */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 40px;
+        }
+
+        /* 卡片容器：为了让头像浮在上面，这里需要相对定位 */
+        .card-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-top: 60px; /* 给上面的头像留出空间 */
+        }
+
+        /* 1. 特殊形状的卡片：顶部被头像“咬掉”一块 */
+        .card {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(0, 180, 200, 0.35);
+            border-radius: 12px;
+            padding: 60px 20px 25px; /* 上内边距大，为头像让位 */
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            overflow: visible;
+        }
+
+        /* 2. 头像圆框：浮在卡片之上，两个同心圆 */
+        .avatar-frame {
+            position: absolute;
+            top: -60px; /* 向上移动，压在卡片上 */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #00a0b0; /* 外圆：浅蓝色 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 4px white; /* 内圆：白色 */
+        }
+
+        /* 头像图片 */
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #223344;
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background-color: #00a0b0;
+            margin: 0 auto 15px;
+        }
+
+        .role-title {
+            font-size: 16px;
+            color: #556677;
+            margin-bottom: 8px;
+        }
+
+        .role-area {
+            font-size: 14px;
+            color: #667788;
+        }
+
+        /* 手机端适配 */
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 70px;
+            }
+            .logo {
+                height: 90px;
+            }
+            .card {
+                padding: 50px 15px 20px;
+            }
+            .avatar-frame {
+                width: 100px;
+                height: 100px;
+                top: -50px;
+            }
+            .avatar {
+                width: 88px;
+                height: 88px;
+            }
+            .name {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部Logo -->
+<div class="header">
+    <img class="logo" src="C:\Users\gabri\Desktop\产品图\logo2.png" alt="IMENSO Logo">
+</div>
+
+<!-- 固定4个销售卡片，严格按你的海报布局 -->
+<div class="container">
+    <!-- 销售1 -->
+    <div class="card-wrapper">
+        <div class="card" onclick="window.open('https://wa.me/5511999990001')">
+            <div class="avatar-frame">
+                <img class="avatar" src="https://picsum.photos/60/60?4">
+            </div>
+            <div class="name">Menolu</div>
+            <div class="divider"></div>
+            <div class="role-title">负责区域</div>
+            <div class="role-area">Contraaic Irielcy Megton</div>
+        </div>
+    </div>
+
+    <!-- 销售2 -->
+    <div class="card-wrapper">
+        <div class="card" onclick="window.open('https://wa.me/5511999990002')">
+            <div class="avatar-frame">
+                <img class="avatar" src="https://picsum.photos/60/60?40">
+            </div>
+            <div class="name">Senestu</div>
+            <div class="divider"></div>
+            <div class="role-title">负责区域</div>
+            <div class="role-area">Corurraaic hiteloy Megton</div>
+        </div>
+    </div>
+
+    <!-- 销售3 -->
+    <div class="card-wrapper">
+        <div class="card" onclick="window.open('https://wa.me/5511999990003')">
+            <div class="avatar-frame">
+                <img class="avatar" src="https://picsum.photos/60/60?41">
+            </div>
+            <div class="name">Mouch</div>
+            <div class="divider"></div>
+            <div class="role-title">负责区域</div>
+            <div class="role-area">Corerrarain nteloy Megton</div>
+        </div>
+    </div>
+
+    <!-- 销售4 -->
+    <div class="card-wrapper">
+        <div class="card" onclick="window.open('https://wa.me/5511999990004')">
+            <div class="avatar-frame">
+                <img class="avatar" src="https://picsum.photos/60/60?42">
+            </div>
+            <div class="name">Seneen</div>
+            <div class="divider"></div>
+            <div class="role-title">负责区域</div>
+            <div class="role-area">Contmaic Inieloy Megton</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
